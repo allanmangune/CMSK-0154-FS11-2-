@@ -8,7 +8,7 @@ namespace Module1Assignment
 {
     public class Student
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public string? FirstName { get; set; }
 
@@ -16,11 +16,11 @@ namespace Module1Assignment
 
         public StudentType? Type { get; set; }
 
-        public Student CreateStudent(string id, string firstName, string lastName, StudentType type)
+        public Student CreateStudent(int? id, string firstName, string lastName, StudentType type)
         {
             if (id == null)
             {
-                id = "0";
+                id = 0;
             }
             if (firstName == null)
             {
@@ -31,7 +31,7 @@ namespace Module1Assignment
                 lastName = "";
             }
 
-            this.Id = id;
+            this.Id = (int)id;
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Type = type;

@@ -1,11 +1,11 @@
 ﻿using Module1Assignment;
 
 Console.WriteLine("Assignment One");
-var student1 = CreateStudent("001", "John", "Smith", StudentType.FullTime);
+var student1 = CreateStudent(001, "John", "Smith", StudentType.FullTime);
 OutputStudent(student1);
-var student2 = CreateStudent("002", "Taylor", "Dane", StudentType.FullTime);
+var student2 = CreateStudent(002, "Taylor", "Dane", StudentType.FullTime);
 OutputStudent(student2);
-var student3 = CreateStudent("003", "Sandy", "Williams", StudentType.FullTime);
+var student3 = CreateStudent(003, "Sandy", "Williams", StudentType.FullTime);
 OutputStudent(student3);
 
 /* Test the if statements of the CreateStudent method
@@ -17,11 +17,11 @@ var student3 = CreateStudent("003", "Sandy", "Williams", StudentType.FullTime);
 OutputStudent(student3);
 */
 
-Student CreateStudent(string id, string firstName, string lastName, StudentType type)
+Student CreateStudent(int? id, string firstName, string lastName, StudentType type)
 {
     if (id == null)
     {
-        id = "0";
+        id = 0;
     }
     if (firstName == null)
     {
@@ -33,7 +33,7 @@ Student CreateStudent(string id, string firstName, string lastName, StudentType 
     }
 
     var student = new Student();
-    student.Id = id;
+    student.Id = (int)id;
     student.FirstName = firstName;
     student.LastName = lastName;
     student.Type = type;
