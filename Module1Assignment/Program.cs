@@ -11,9 +11,9 @@ OutputStudent(student3);
 /* Test the if statements of the CreateStudent method
 var student1 = CreateStudent(null, "John", "Smith", StudentType.FullTime);
 OutputStudent(student1);
-var student2 = CreateStudent("002", null, "Dane", StudentType.FullTime);
+var student2 = CreateStudent(002, null, "Dane", StudentType.FullTime);
 OutputStudent(student2);
-var student3 = CreateStudent("003", "Sandy", "Williams", StudentType.FullTime);
+var student3 = CreateStudent(003, "Sandy", "Williams", StudentType.FullTime);
 OutputStudent(student3);
 */
 
