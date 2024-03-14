@@ -17,14 +17,6 @@ var student3 = CreateStudent("003", "Sandy", "Williams", StudentType.FullTime);
 OutputStudent(student3);
 */
 
-/// <summary>
-/// 
-/// </summary>
-/// <param name="id"></param>
-/// <param name="firstName"></param>
-/// <param name="lastName"></param>
-/// <param name="type"></param>
-/// <returns></returns>
 Student CreateStudent(string id, string firstName, string lastName, StudentType type)
 {
     if (id == null)
@@ -48,11 +40,6 @@ Student CreateStudent(string id, string firstName, string lastName, StudentType 
     return student;
 }
 
-/// <summary>
-/// 
-/// </summary>
-/// <param name="student"></param>
-/// <returns></returns>
 void OutputStudent(Student student)
 {
     Console.WriteLine($"Student: {student.Id} {student.FirstName} {student.LastName} ({student.Type})");
