@@ -22,20 +22,13 @@ namespace Module1Assignment
             {
                 id = 0;
             }
-            if (firstName == null)
-            {
-                firstName = StudentType.Unknown.ToString();
-            }
-            if (lastName == null)
-            {
-                lastName = "";
-            }
 
-            this.Id = (int)id;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Type = type;
-            return this;
+            Student student = new Student(); //Required by the assignment. Alternatively, assign the values to the class properties and then return the this instance.
+            student.Id = (int)id;
+            student.Type = type;
+            student.FirstName = firstName ?? StudentType.Unknown.ToString();
+            student.LastName = lastName ?? string.Empty;
+            return student;
         }
 
         public void OutputStudent(Student student)

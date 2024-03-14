@@ -23,20 +23,11 @@ Student CreateStudent(int? id, string firstName, string lastName, StudentType ty
     {
         id = 0;
     }
-    if (firstName == null)
-    {
-        firstName = StudentType.Unknown.ToString();
-    }
-    if (lastName == null)
-    {
-        lastName = "";
-    }
-
     var student = new Student();
     student.Id = (int)id;
-    student.FirstName = firstName;
-    student.LastName = lastName;
     student.Type = type;
+    student.FirstName = firstName ?? StudentType.Unknown.ToString();
+    student.LastName = lastName ?? string.Empty;
     return student;
 }
 
